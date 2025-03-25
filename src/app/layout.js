@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { MantineProvider } from "@mantine/core";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +23,9 @@ export default function RootLayout({ children }) {
       <head>
         <title>Discord Colored Text Generator</title>
       </head>
-      <body className="min-h-screen bg-gray-900 text-white p-5">{children}</body>
+      <body className="min-h-screen bg-gray-900 text-white p-5"><MantineProvider withGlobalStyles withNormalizeCSS>
+      {children}
+    </MantineProvider></body>
     </html>
   );
 }
