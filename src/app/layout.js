@@ -19,11 +19,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <head>
+        <title>Discord Colored Text Generator</title>
+      </head>
+      <body className="min-h-screen bg-gray-900 text-white p-5">{children}</body>
     </html>
   );
 }
